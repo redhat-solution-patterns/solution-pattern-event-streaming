@@ -1,5 +1,5 @@
-name: solution-pattern-template
-title: Template Tutorial
+name: recommendation-engine
+title: Recommendation Engine using Event Streaming
 version: master
 nav:
   - modules/ROOT/nav.adoc

@@ -4,7 +4,10 @@
 :sectlinks:
 :doctype: book
 
-A brief introduction of this solution pattern.
+https://www.redhat.com/en/topics/integration/what-is-streaming-data[Streaming data^] is the continuous flow of real-time information, and the foundation of the event-driven architecture software model. Modern applications can use streaming data to enable data processing, storage, and analysis. 
+
+Businessed can use this large, fast-moving data sets to build a system that can respond to the data in real-time. This solution pattern deals with building an event streaming platform using Red Hat AMQ Streams based on Apache Kafka to track user activity on an ecomerce website so as to find out the most popular products in the store.
+
 
 include::content-overview.adoc[]
 
@@ -13,10 +16,45 @@ include::content-overview.adoc[]
 
 Common use cases that can be address with this architecture are:
 
-- xyz
-- xyz
+* *Digital experiences* that rely on immediate access to information.
+* *Microservices applications* that support agile software development.
+* *Streaming scenarios* that modernize database-driven applications that were previously driven by batch processing.
+* *Real-time analytics*, especially ones that ingest data from multiple sources.
+* *Edge computing* that brings together data from diverse and disparate devices and systems.
 
-include::01-pattern.adoc[]
+== The story behind this solution pattern
+
+Globex is a fictitious retail company. The company recently started a digital transformation and cloud adoption journey. As part of this initiative, the development and devops teams have completed the modernization of the existing multi-tier monolithic retail e-commerce web application. The monolithic application was split in a couple of loosely-coupled microservices and the application was re-hosted on OpenShift.
+
+A schematic overview of the current state of the application after the first phase of the application modernization effort:
+
+image::globex-phase1.png[width=60%]
+
+
+
+To further enhance the Globex Retail application, the business comes up with new requirements
+
+* The ability to track user activity on the website and the mobile application.
+* Highlight products which generate most customer interest as featured products.
+* Provide a personalized experience for users on the website and mobile application.
+
+The team decides to use the Kafka ecosystem to track the user activity since it can easily scale. Red Hat AMQ Streams (based on the upstream Strimzi) provides a Kubernetes/OpenShift-centric view of Apache Kafka, providing operator-based installation and upgrades, and cloud-native management of brokers, topics and security.
+
+== The Solution
+
+Visitors engage with the Globex retail website in a number of ways:
+
+* View list of products
+* Search for products
+* Like a product / add a product to favourites
+* View product details 
+* Add products to the shopping cart
+* Place an order
+
+Each of these activities generate a stream of events which are captured by  the *User Activity Tracking* service. This service then pushes the events into the Kafka streaming platform. 
+The events can then be consumed by other services such as the *Product Recommendation* service which powers the list of featured products.
+A new *Featured Products* section is created in the front-end web application to showcase the top featured products. 
+
 
 == Explore more solution patterns
 include::https://raw.githubusercontent.com/redhat-solution-patterns/redhat-solution-patterns.github.io/master/documentation/modules/ROOT/pages/solution-pattern-list.adoc[]
