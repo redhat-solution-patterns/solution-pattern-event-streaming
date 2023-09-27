@@ -1,4 +1,4 @@
-= Solution Patterns: Template Name
+= Recommendation Engine using Event Streaming
 :page-layout: home
 :sectnums:
 :sectlinks:
