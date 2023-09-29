@@ -8,8 +8,7 @@ https://www.redhat.com/en/topics/integration/what-is-streaming-data[Streaming da
 
 Businessed can use this large, fast-moving data sets to build a system that can respond to the data in real-time. This solution pattern deals with building an event streaming platform using Red Hat AMQ Streams based on Apache Kafka to track user activity on an ecomerce website so as to find out the most popular products in the store.
 
-
-include::content-overview.adoc[]
+*Contributors:* _Bernard Tison (Red Hat), Jaya Christina Baskaran (Red Hat)_
 
 [#use-cases]
 == Use cases
@@ -56,5 +55,9 @@ The events can then be consumed by other services such as the *Product Recommend
 A new *Featured Products* section is created in the front-end web application to showcase the top featured products. 
 
 
-== Explore more solution patterns
-include::https://raw.githubusercontent.com/redhat-solution-patterns/redhat-solution-patterns.github.io/master/documentation/modules/ROOT/pages/solution-pattern-list.adoc[]
+== Developer Resources
+
+* link:https://developers.redhat.com/about[Register^] for Red Hat developers subscription to get access to Red Hat products for personal use at no cost
+* link:https://developers.redhat.com/products/openshift/overview[Red Hat OpenShift^] 
+* link:https://developers.redhat.com/products/quarkus/overview[Quarkus^]
+* https://developers.redhat.com/products/amq/overview[Red Hat AMQ^]
