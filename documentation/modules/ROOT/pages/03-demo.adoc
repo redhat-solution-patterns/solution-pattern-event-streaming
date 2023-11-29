@@ -1,4 +1,4 @@
-= Solution Pattern: Name Template
+= Solution Pattern: Recommendation Engine using Event Streaming
 :sectnums:
 :sectlinks:
 :doctype: book
