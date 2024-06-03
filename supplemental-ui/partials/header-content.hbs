@@ -43,67 +43,67 @@
 
   </script>
   <nav class="navbar">
-   <div class="navbar-brand">
+    <div class="navbar-brand">
       <a class="navbar-item" style="font-size: 20px; color: white" href="{{{or site.url (or siteRootUrl siteRootPath)}}}">
         <img src="{{uiRootPath}}/img/logo.png" height="35px" alt="Solution Patterns">&nbsp; {{site.title}}</a>
       <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-      
     </div>
-    <div class="navbar-item" ><span class="navbar-text" style="color: white; margin-left: 1rem; margin-right: 1rem;">|</span></div>
-    
-    <div class="navbar-item has-dropdown is-hoverable" >
-      <a class="navbar-link" href="#" style="color: white">Red Hat Patterns</a>
-      <div class="navbar-dropdown">
-        <a class="navbar-item" href="https://www.redhat.com/architect/portfolio/" target="_blank">Portfolio Architecture&nbsp; </a>
-        <a class="navbar-item" href="https://redhat-solution-patterns.github.io/solution-patterns/patterns.html" target="_blank">Solution Patterns </a>
-        <a class="navbar-item" href="https://validatedpatterns.io/" target="_blank">Validated Patterns&nbsp;</a>
-
-      </div>
-    </div>
-    <div class="navbar-item has-dropdown is-hoverable" >
-      <a class="navbar-link" href="#" style="color: white">Resources</a>
-      <div class="navbar-dropdown">
-        <a class="navbar-item" target="_blank" href="https://www.redhat.com/en/products/application-foundations">Red Hat Application Services</a>
-        <a class="navbar-item" target="_blank" href="https://developers.redhat.com/app-dev-platform">App Dev Platform</a>
-      </div>
-    </div>
-
-    <div class="navbar-item" ><span class="navbar-text" style="color: white; margin-left: 1rem; margin-right: 1rem;">|</span></div>
-
-
-    
-
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        
-
-
-        <div class="navbar-item" id="navbar-form-empty">
-          <span class="navbar-text" style="margin-left: 2rem;">
-          <span class="navbar-text" style="margin-left: 1rem; margin-right: 1rem;">&nbsp;<i style="color: orange;"
-              class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
-            Your Workshop Environment
-
-          <form action="javascript:void(0);" onsu>
-            <input size="20" id="userId" type="text" placeholder="USER ID">
-            <input size="20" id="subdomain" type="text" placeholder="Subdomain">
-            <button type="hidden" onclick="goWithUserId();">Set</button>
-          </form>
-        </div>
-        
-        <div class="navbar-item" id="navbar-form-filled" style="display: none;">
-          <span class="navbar-text" style="margin-left: 2rem;">
-          <span class="navbar-text " style="margin-left: 1rem; margin-right: 1rem; float:left">
-            &nbsp;Your Workshop Environment <span class="navbar-text" style="margin-left: 1rem; margin-right: 1rem;">&nbsp;<i alt="Clear details" title="Clear details" onclick="recycle();" style="color: green;" class="fa fa-recycle" aria-hidden="true"></i>
-
-          <br><span  id="userIdDisplay"></span> <span  style="color: white; margin-left: 1rem; margin-right: 1rem;">|</span>
-          <span id="subdomainDisplay"></span>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Architectures &amp; Patterns</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.redhat.com/architect/portfolio/" target="_blank">Portfolio Architecture&nbsp; </a>
+            <a class="navbar-item" href="https://redhat-solution-patterns.github.io/solution-patterns/patterns.html"  target="_blank">Solution Patterns </a>
+            <a class="navbar-item" href="https://validatedpatterns.io/" target="_blank">Validated Patterns&nbsp;</a>
+            <a class="navbar-item" href="https://catalog.redhat.com/solutions" target="_blank">Ecosystem Solutions&nbsp;</a>
+          </div>
         </div>
 
-        
-        </span>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" target="_blank" href="https://developers.redhat.com">Red Hat Developers</a>
+            <a class="navbar-item" target="_blank" href="https://developers.redhat.com/app-dev-platform">App Dev Platform</a>
+            <a class="navbar-item" target="_blank" href="https://www.redhat.com/en/products/application-foundations">Red Hat Application Services</a>
+          </div>
+        </div>
 
+          <a class="navbar-item" target="_blank" href="https://github.com/redhat-solution-patterns/redhat-solution-patterns.github.io/issues">Feedback</a>
+          <a class="navbar-item" target="_blank" href="https://redhat-solution-patterns.github.io/solution-patterns/contributors-guide.html">Contribute</a>
+
+          <div class="navbar-item" >         
+              <div id="navbar-form-empty">
+                <span >
+                  <span>
+                    &nbsp;
+                    <i style="color: orange;" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                  </span>
+                  Your Workshop Environment
+                <form action="javascript:void(0);" onsu>
+                  <input size="20" id="userId" type="text" placeholder="USER ID">
+                  <input size="20" id="subdomain" type="text" placeholder="Subdomain">
+                  <button type="hidden" onclick="goWithUserId();">Set</button>
+                </form>
+                </span>
+              </div>
+        
+              <div  id="navbar-form-filled" style="display: none;">
+                <span>
+                <span>
+                  Your Workshop Environment
+                    <span class="navbar-text" style="margin-left: 1rem; margin-right: 1rem;">
+                    <i alt="Clear details" title="Clear details" onclick="recycle();" style="color: green;" class="fa fa-recycle" aria-hidden="true"></i>
+                    <br><span  id="userIdDisplay"></span> <span>|</span>
+                <span id="subdomainDisplay"></span>
+              </div>
+          </div>
+      </div>
     </div>
   </nav>
 </header>
+
